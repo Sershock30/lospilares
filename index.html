@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inicio</title>
+	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="style/slider.css">
+	<link rel="stylesheet" href="style/mail-form.css">
+	<link rel="stylesheet" href="style/spinner.css">
+	<link href="https://fonts.googleapis.com/css?family=Mr+Dafoe|Rouge+Script" rel="stylesheet">
+	<script src="js/jquery.js"></script>
+	
+	<script>
+			$(document).ready(function(){
+				$("a").on('click', function(event) {
+					if (this.hash != ""){
+						event.preventDefault();
+						var hash = this.hash;
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+						}, 800, function(){
+						window.location.hash = hash;
+						});
+					}
+				});
+				//Fin de la funcion del smooth scrolling
+
+
+			});
+	</script>
+</head>
+<body onload="hideloader()">
+	
+	<div id="c-spinner">
+		<div id="spinner"></div>
+		<h3>Cargando <span class="punto1">.</span>
+		<span class="punto2">.</span>
+		<span class="punto3">.</span></h3>
+	</div>	
+	<header>
+		<nav id="nav">
+			<a class="menu" href="#contacto" class="last">Contacto</a>
+			<a class="menu" href="#proyectos">Galer&iacute;a</a>
+			<a class="menu" href="#informacion">Informaci&oacute;n</a>
+		</nav>
+		<div class="clear"></div>
+		<div id="c-slider">
+			<div class="content">
+				<section><img src="images/DSC09747.jpg" alt=""></section>
+				<section><img src="images/piscina1.jpg" alt=""></section>
+				<section><img src="images/DSC09786.jpg" alt=""></section>
+				<div id="btn-prev"><</div>
+				<div id="btn-next">></div>
+			</div>
+			<h1 id="Titulo">Los Pilares</h1>
+		</div>
+	</header>
+	<div id="wrapper">
+		<div id="inicio"></div>
+		<div class="primera-info" id="informacion">
+			<img src="images/PilaresLogo.jpg" alt="">
+		</div>
+			<div class="info-section-container">
+				<div class="info-section"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum at tempora perspiciatis quisquam sapiente neque laboriosam autem minus. Natus molestias quae velit voluptates aliquid cum tempore fugiat nulla, et reprehenderit.</p></div>
+				<div class="info-section"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum mollitia nam officiis odit ea error consequuntur sint accusamus nobis culpa dolorem eum consequatur voluptate rerum aperiam harum, sunt voluptatem modi.</p></div>
+				<div class="info-section"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi accusantium officia fuga iure labore, perferendis earum deleniti quas voluptatum qui cum fugiat beatae quam! Id atque veritatis eos natus sunt.</p></div>
+				<div class="info-section">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint voluptatibus vel quos earum asperiores, quod saepe a fugit necessitatibus quam voluptatem quo, repellat, accusantium dolor numquam modi nam inventore explicabo?</p>
+				</div>
+				<div class="info-section">
+					<p>Suscipit expedita dolores, ducimus, mollitia explicabo non architecto similique laudantium cum laboriosam doloremque placeat cupiditate veniam, blanditiis illum impedit repudiandae doloribus quisquam corporis veritatis tempora! Sequi, esse. Aspernatur, laudantium, assumenda.</p>
+				</div>
+				<div class="info-section">
+					<p>Voluptate quae iste maxime ad nulla odit doloremque, hic odio omnis aliquam ex quod enim voluptates explicabo sunt sed. Voluptate sed officiis et reprehenderit quos ea ex, ratione vel deleniti.</p>
+				</div>
+			</div>
+		<div class="clear"></div>
+
+		<!-- <div id="contacto">
+			<form action="php/send_email.php" method="post">
+				<h2>CONTACTO</h2>
+				<input type="text" name="Nombre" placeholder="Nombre" required>
+				<input type="email" name="Correo" placeholder="Correo" required>
+				<textarea name="mensaje" placeholder="Mensaje" required></textarea>
+				<input type="submit" value="ENVIAR" id="boton">
+			</form>
+		</div> -->
+	</div>
+	<a class="volver" id="volver" href="#c-slider">^</a>
+	<footer>
+		<p>Copyright&copy; Los Pilares 2016 / <a href="">Desarrollo: SCMDeveloper</a></p>
+	</footer>
+	<script src="js/precios.js"></script>
+	<script src="js/slider.js"></script>
+	<script src="js/menu.js"></script>
+</body>
+</html>
